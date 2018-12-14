@@ -15,6 +15,15 @@
 /*------------ modal -----------------*/
 .modal-wrapper {
   background:
+  -webkit-gradient(linear, left top, left bottom, from(#0e81d6), to(rgba(0, 173, 95, 0.8))),
+  url('../img/main-background.jpg') no-repeat center;
+  background:
+  -webkit-linear-gradient(top, #0e81d6, rgba(0, 173, 95, 0.8)),
+  url('../img/main-background.jpg') no-repeat center;
+  background:
+  -o-linear-gradient(top, #0e81d6, rgba(0, 173, 95, 0.8)),
+  url('../img/main-background.jpg') no-repeat center;
+  background:
   linear-gradient(180deg, #0e81d6, rgba(0, 173, 95, 0.8)),
   url('../img/main-background.jpg') no-repeat center;
   background-size: cover;
@@ -23,28 +32,48 @@
 
 .modal {
   background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column-reverse;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
   margin: auto;
   min-width: 280px;
 }
 
 /*------------ contact-info -----------------*/
 .contact-info {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: rgba(0, 0, 0, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 30px 15px 60px 15px;
 }
 .contact-info-item__icon {
   padding-right: 25px;
 }
 .contact-info-item {
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   margin-bottom: 45px;
   max-width: 100%;
   width: 250px;
@@ -82,10 +111,19 @@
 
 /*------------ contact-form -----------------*/
 .contact-form {
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   padding: 50px 15px;
 }
 
@@ -111,6 +149,8 @@
   outline-offset: 6px;
   padding: 25px;
   position: relative;
+  -webkit-transition: outline-offset 0.4s ease;
+  -o-transition: outline-offset 0.4s ease;
   transition: outline-offset 0.4s ease;
   width: 100%;
 }
@@ -127,8 +167,13 @@
 }
 
 .contact-form-item__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .contact-form-item__row-input {
@@ -158,7 +203,10 @@
     padding: 55px 30px;
   }
   .contact-form-item__row {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .contact-form-item__row-input {
     margin-right: -1px;
@@ -168,24 +216,35 @@
 
 @media only screen and (min-width: 768px) {
   .modal {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .contact-form {
-    flex: 60%;
+    -webkit-box-flex: 60%;
+        -ms-flex: 60%;
+            flex: 60%;
   }
   .contact-info {
-    flex: 40%;
+    -webkit-box-flex: 40%;
+        -ms-flex: 40%;
+            flex: 40%;
   }
 
 }
 
 @media only screen and (min-width: 992px) {
   .contact-form {
-    flex: 50%;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
     padding: 55px;
   }
   .contact-info {
-    flex: 50%;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
   }
   .modal {
     max-width: 1120px;
