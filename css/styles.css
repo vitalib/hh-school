@@ -85,7 +85,6 @@
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  /*flex-grow: 1;*/
   justify-content: flex-start;
   padding: 50px 15px;
 }
@@ -132,7 +131,7 @@
   flex-direction: column;
 }
 
-.contact-form-item__first-input-in-row {
+.contact-form-item__row-input {
   margin-bottom: -1px;
 }
 
@@ -161,9 +160,9 @@
   .contact-form-item__row {
     flex-direction: row;
   }
-  .contact-form-item__first-input-in-row {
+  .contact-form-item__row-input {
     margin-right: -1px;
-    flex:100%;
+    width: 50%;
   }
 }
 
