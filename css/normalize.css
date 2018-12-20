@@ -7,7 +7,6 @@
 }
 
 body, html {
-    height: 100%;
     font-family: var(--main-font-family);
 }
 
@@ -58,7 +57,6 @@ textarea {
     outline: none;
     border: none;
 }
-
 
 input:focus::-webkit-input-placeholder { color:transparent; }
 input:focus:-moz-placeholder { color:transparent; }
